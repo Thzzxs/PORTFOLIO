@@ -31,92 +31,10 @@ const chatMessages = document.getElementById("chat-messages");
 const chatInput = document.getElementById("chat-input");
 const chatSend = document.getElementById("chat-send");
 
-// Lista de mensagens iniciais
 let messages = [
-    { type: "bot", message: "Olá! Sou seu assistente virtual. Como posso ajudá-lo hoje? 😊" }
+    { type: "bot", message: "Olá! Como posso ajudá-lo hoje?" }
 ];
 
-// Função para gerar respostas do bot
-function getBotResponse(userMessage) {
-    const msg = userMessage.toLowerCase();
-
-    // Saudações
-    if (msg.includes("olá") || msg.includes("oi") || msg.includes("bom dia") || msg.includes("boa tarde") || msg.includes("boa noite")) {
-        const greetings = [
-            "Oi! Que bom te ver por aqui 😊",
-            "Olá! Como você está hoje?",
-            "E aí! Pronto para explorar nossos serviços?",
-            "Oi! Espero que seu dia esteja ótimo!"
-        ];
-        return greetings[Math.floor(Math.random() * greetings.length)];
-    }
-
-    // Serviços
-    if (msg.includes("serviço") || msg.includes("site") || msg.includes("manutenção") || msg.includes("análise") || msg.includes("dados")) {
-        const services = [
-            "Oferecemos criação de sites modernos e responsivos.",
-            "Podemos realizar manutenção de sistemas e sites existentes.",
-            "Temos serviços de análise de dados para otimizar seu negócio.",
-            "Desenvolvemos soluções personalizadas para sua empresa!"
-        ];
-        return services[Math.floor(Math.random() * services.length)];
-    }
-
-    // Contato
-    if (msg.includes("contato") || msg.includes("telefone") || msg.includes("email") || msg.includes("falar")) {
-        return "Você pode nos contatar pelo email: contato@empresa.com ou pelo telefone (11) 99999-9999. 📞";
-    }
-
-    // Preço
-    if (msg.includes("preço") || msg.includes("valor") || msg.includes("custo")) {
-        return "Os valores dependem do serviço desejado. Me diga qual serviço você quer, que eu informo o preço!";
-    }
-
-    // Vagas / trabalho
-    if (msg.includes("trabalho") || msg.includes("vaga") || msg.includes("oportunidade") || msg.includes("emprego")) {
-        const jobs = [
-            "Temos vagas em desenvolvimento, análise de dados e suporte técnico!",
-            "Atualmente estamos buscando profissionais para nossa equipe de TI.",
-            "Você pode se candidatar enviando seu currículo pelo nosso site."
-        ];
-        return jobs[Math.floor(Math.random() * jobs.length)];
-    }
-
-    // Agradecimentos
-    if (msg.includes("obrigado") || msg.includes("valeu") || msg.includes("brigado")) {
-        const thanks = [
-            "De nada! 😊 Sempre à disposição.",
-            "Por nada! Espero ter ajudado.",
-            "Imagina! Qualquer coisa é só chamar."
-        ];
-        return thanks[Math.floor(Math.random() * thanks.length)];
-    }
-
-    // Perguntas engraçadas / divertidas
-    if (msg.includes("piada") || msg.includes("engraçado") || msg.includes("diversão")) {
-        const jokes = [
-            "Por que o computador foi ao médico? Porque estava com vírus! 😷💻",
-            "O que o JavaScript disse para o HTML? 'Você completa minha tag!' 😂",
-            "Sabe por que o programador sempre confunde Halloween com Natal? Porque OCT 31 = DEC 25! 🎃🎄"
-        ];
-        return jokes[Math.floor(Math.random() * jokes.length)];
-    }
-
-    // Horário / funcionamento
-    if (msg.includes("horário") || msg.includes("funciona") || msg.includes("aberto")) {
-        return "Nosso horário de atendimento é de segunda a sexta, das 9h às 18h. ⏰";
-    }
-
-    // Mensagem padrão
-    const defaultResponses = [
-        "Desculpe, não entendi. Pode reformular a pergunta? 🤔",
-        "Hmm... não tenho certeza sobre isso, mas posso te ajudar com nossos serviços!",
-        "Essa é uma boa pergunta! Por enquanto posso falar sobre nossos serviços e contato."
-    ];
-    return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
-}
-
-// Renderiza mensagens no chat
 function renderMessages() {
     chatMessages.innerHTML = "";
     messages.forEach(msg => {
@@ -128,19 +46,6 @@ function renderMessages() {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Enviar mensagem do usuário
-function sendMessage() {
-    const userMessage = chatInput.value.trim();
-    if (userMessage) {
-        messages.push({ type: "user", message: userMessage });
-        const botReply = getBotResponse(userMessage);
-        messages.push({ type: "bot", message: botReply });
-        chatInput.value = "";
-        renderMessages();
-    }
-}
-
-// Event listeners
 chatbotToggle.addEventListener("click", () => {
     chatbotBox.classList.toggle("hidden");
     chatbotBox.classList.toggle("open");
@@ -154,11 +59,25 @@ chatbotClose.addEventListener("click", () => {
     chatbotBox.classList.add("closed");
 });
 
-chatSend.addEventListener("click", sendMessage);
+chatSend.addEventListener("click", () => {
+    sendMessage();
+});
 
 chatInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") sendMessage();
+    if (e.key === "Enter") {
+        sendMessage();
+    }
 });
+
+function sendMessage() {
+    const userMessage = chatInput.value.trim();
+    if (userMessage) {
+        messages.push({ type: "user", message: userMessage });
+        messages.push({ type: "bot", message: "Obrigado pela sua mensagem! Em breve entrarei em contato." });
+        chatInput.value = "";
+        renderMessages();
+    }
+}
 
 // Technologies Carousel
 const techCarousel = document.getElementById("tech-carousel");
