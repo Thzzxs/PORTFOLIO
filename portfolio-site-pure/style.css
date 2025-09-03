@@ -321,4 +321,7 @@ body.dark .text-blue-400 {
   scrollbar-width: none;  /* Firefox */
 }
 
+.mb-6 {
+  text-align: center;
+}
 
