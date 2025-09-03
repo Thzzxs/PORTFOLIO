@@ -101,15 +101,40 @@ const technologies = [
     { name: 'TypeScript', color: 'bg-blue-600', icon: '📘' }
 ];
 
+// Criando os cards
 technologies.forEach(tech => {
     const techDiv = document.createElement("div");
-    techDiv.classList.add("flex-shrink-0", tech.color, "rounded-lg", "p-4", "min-w-[150px]", "text-center", "shadow-lg", "hover:shadow-xl", "transition-shadow", "duration-300", "transform", "hover:scale-105");
+    techDiv.classList.add(
+        "flex-shrink-0", tech.color, "rounded-lg", "p-4", 
+        "min-w-[150px]", "text-center", "shadow-lg", 
+        "hover:shadow-xl", "transition-shadow", "duration-300", 
+        "transform", "hover:scale-105"
+    );
     techDiv.innerHTML = `
         <div class="text-2xl mb-2">${tech.icon}</div>
         <div class="text-white font-semibold">${tech.name}</div>
     `;
     techCarousel.appendChild(techDiv);
 });
+
+// ---------------------------
+// Rolagem automática
+// ---------------------------
+let scrollSpeed = 0.5;      // Velocidade do carrossel (px por passo)
+let intervalTime = 20;      // Intervalo entre passos (ms)
+
+function autoScroll() {
+    techCarousel.scrollLeft += scrollSpeed;
+
+    // Reinicia o scroll quando chegar na metade (porque duplicamos os cards)
+    if (techCarousel.scrollLeft >= techCarousel.scrollWidth / 2) {
+        techCarousel.scrollLeft = 0;
+    }
+}
+
+// Inicia a rolagem automática
+setInterval(autoScroll, intervalTime);
+
 
 // Projects Section
 const projectsGrid = document.getElementById("projects-grid");
