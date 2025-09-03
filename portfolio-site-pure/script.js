@@ -191,23 +191,6 @@ technologies.forEach(tech => {
     techCarousel.appendChild(techDiv);
 });
 
-// ---------------------------
-// Rolagem automática
-// ---------------------------
-let scrollSpeed = 0.5;      // Velocidade do carrossel (px por passo)
-let intervalTime = 20;      // Intervalo entre passos (ms)
-
-function autoScroll() {
-    techCarousel.scrollLeft += scrollSpeed;
-
-    // Reinicia o scroll quando chegar na metade (porque duplicamos os cards)
-    if (techCarousel.scrollLeft >= techCarousel.scrollWidth / 2) {
-        techCarousel.scrollLeft = 0;
-    }
-}
-
-// Inicia a rolagem automática
-setInterval(autoScroll, intervalTime);
 
 
 // Projects Section
