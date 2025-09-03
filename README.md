@@ -8,13 +8,12 @@ Este projeto foi desenvolvido com foco em **modernidade**, **performance** e **r
 ## 🖼️ Preview do Projeto  
 
 ### 🌞 Tema Claro  
-![Tema Claro](./a1.png)  
 
 ### 🌙 Tema Escuro  
-![Tema Escuro](./a2.png)  
+ 
 
 ### ⚡ Tecnologias & Serviços  
-![Tecnologias](./a3.png)  
+
 
 ---
 
