@@ -6,9 +6,9 @@
     <title>Portfólio - Desenvolvedor e Analista de Sistemas</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body class="min-h-screen transition-colors duration-300 bg-gradient-to-br from-blue-50 to-indigo-100 scroll-smooth">
+<body class="min-h-screen transition-colors duration-300 bg-gradient-to-br from-blue-50 to-indigo-100">
     <!-- Header -->
     <header class="backdrop-blur-md shadow-sm sticky top-0 z-40 transition-all duration-300 bg-white/80">
         <nav class="container mx-auto px-6 py-4">
@@ -23,7 +23,7 @@
                         <a href="#contact" class="transition-all duration-300 hover:scale-110 text-gray-700 hover:text-blue-600">Contato</a>
                     </div>
                     <button id="theme-toggle" class="rounded-full p-2 transition-all duration-300 border-gray-300 hover:bg-gray-100">
-                        <i class="fa-regular fa-moon w-4 h-4"></i>
+                        <i class="fas fa-moon w-4 h-4"></i>
                     </button>
                 </div>
             </div>
@@ -47,26 +47,110 @@
                                 Thiago Marinho
                             </div>
                             <div class="text-xs text-blue-600 font-medium">
-                                Analista de Dados & Desenvolvedor Web
+                                Analista de dados / Desenvolvedor Web
                             </div>
                         </div>
                         <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                     </div>
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-float text-gray-800">
-                    Desenvolvedor e Analista de Sistemas
-                    <span class="text-blue-600 block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Profissional</span>
+         Desenvolvedor e Analista de Sistemas
+                    <span class="text-blue-600 block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Profissionais</span>
                 </h1>
                 <p class="text-xl mb-8 max-w-2xl mx-auto opacity-0 animate-fadeIn text-gray-600" style="animation-delay: 0.5s; animation-fill-mode: forwards;">
-                    Transformo ideias em soluções digitais modernas, responsivas e otimizadas para gerar resultados reais.
+                    Transformo suas ideias em soluções digitais modernas, responsivas e otimizadas para resultados
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fadeIn" style="animation-delay: 1s; animation-fill-mode: forwards;">
-                    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl py-3 px-6 rounded-lg text-white font-semibold">
+                    <button class="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl py-3 px-6 rounded-lg text-white font-semibold">
                         Ver Projetos
-                    </a>
-                    <a href="#contact" class="transform hover:scale-105 transition-all duration-300 border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-6 rounded-lg border-2 bg-transparent">
+                    </button>
+                    <button class="transform hover:scale-105 transition-all duration-300 border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-6 rounded-lg border-2 bg-transparent">
                         Entre em Contato
-                    </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Carousel Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">Tecnologias Dominadas</h2>
+                <p class="text-lg text-gray-600">Ferramentas e linguagens que utilizo para criar soluções incríveis</p>
+            </div>
+            <div class="relative overflow-hidden">
+                <div class="flex animate-scroll space-x-8" id="tech-carousel">
+                    <!-- Technologies will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Meus Serviços</h2>
+                <p class="text-xl text-gray-600">Soluções completas para sua presença digital</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-500 border-blue-100 hover:border-blue-300 transform hover:-translate-y-2 group">
+                    <div class="text-blue-600 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300"><i class="fas fa-globe w-8 h-8"></i></div>
+                    <h3 class="text-xl font-semibold text-center group-hover:text-blue-600 transition-colors duration-300">Desenvolvimento Web</h3>
+                    <p class="text-center text-gray-600">Sites responsivos e modernos com as melhores tecnologias do mercado</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-500 border-blue-100 hover:border-blue-300 transform hover:-translate-y-2 group">
+                    <div class="text-blue-600 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300"><i class="fas fa-mobile-alt w-8 h-8"></i></div>
+                    <h3 class="text-xl font-semibold text-center group-hover:text-blue-600 transition-colors duration-300">Analise de dados</h3>
+                    <p class="text-center text-gray-600">O serviço de análise de dados ajuda empresas a transformar informações brutas em insights valiosos.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-500 border-blue-100 hover:border-blue-300 transform hover:-translate-y-2 group">
+                    <div class="text-blue-600 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300"><i class="fas fa-code w-8 h-8"></i></div>
+                    <h3 class="text-xl font-semibold text-center group-hover:text-blue-600 transition-colors duration-300">Sistemas Personalizados</h3>
+                    <p class="text-center text-gray-600">Soluções sob medida para atender às necessidades específicas do seu negócio</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-500 border-blue-100 hover:border-blue-300 transform hover:-translate-y-2 group">
+                    <div class="text-blue-600 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300"><i class="fas fa-bolt w-8 h-8"></i></div>
+                    <h3 class="text-xl font-semibold text-center group-hover:text-blue-600 transition-colors duration-300">Engenharia de dados</h3>
+                    <p class="text-center text-gray-600">A engenharia de dados é o processo de criar e manter estruturas que organizam e transportam informações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Projetos Recentes</h2>
+                <p class="text-xl text-gray-600">Alguns dos trabalhos que desenvolvi</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Projects will be injected here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Sobre Mim</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Sou um desenvolvedor apaixonado por criar experiências digitais únicas. Com mais de 5 anos de experiência,
+                        especializo-me em desenvolvimento web moderno, sempre focando na qualidade e performance.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Minha missão é transformar ideias em soluções digitais que geram resultados reais para meus clientes.
+                    </p>
+                    <div class="flex flex-wrap gap-3" id="skills-badges">
+                        <!-- Skills will be injected here by JavaScript -->
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="assets/profile-photo.jpg" alt="Sobre Mim" class="rounded-lg shadow-lg w-full max-w-md"/>
                 </div>
             </div>
         </div>
@@ -82,46 +166,54 @@
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
                 <form id="contact-form">
                     <div class="mb-6">
-                        <img src="assets/curriculo.png" alt="Currículo Thiago" class="rounded-lg shadow-lg w-full max-w-md mx-auto"/>
+                        <img src="assets/curriculo.png" alt="Sobre Mim" class="rounded-lg shadow-lg w-full max-w-md"/>
                     </div>
                 </form>
                 <div class="mt-12 text-center text-gray-700">
                     <h3 class="text-2xl font-bold mb-4">Informações de Contato</h3>
-                    <p class="mb-2"><i class="fa-regular fa-envelope mr-2"></i> mdesthiago@gmail.com</p>
-                    <p class="mb-2"><i class="fa-solid fa-phone mr-2"></i> (11) 95637-7650</p>
-                    <p><i class="fa-solid fa-location-dot mr-2"></i> São Paulo, SP</p>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> mdesthiago@gmail.com</p>
+                    <p class="mb-2"><i class="fas fa-phone mr-2"></i> (11) 95637-7650</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i> São Paulo, SP</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="py-8 px-6 text-center text-gray-600 bg-white shadow-inner">
+        <div class="container mx-auto">
+            <p>&copy;  Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <!-- Chatbot -->
     <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
         <button id="chatbot-toggle" class="bg-blue-600 hover:bg-blue-700 rounded-full w-14 h-14 flex items-center justify-center text-white transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse">
-            <i class="fa-regular fa-comments w-6 h-6"></i>
+            <i class="fas fa-comment-dots w-6 h-6"></i>
         </button>
         <div id="chatbot-box" class="hidden absolute bottom-16 right-0 w-80 bg-white rounded-lg shadow-xl flex flex-col overflow-hidden transition-all duration-300 transform scale-0 origin-bottom-right">
             <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
                 <h3 class="font-bold">Chatbot</h3>
-                <button id="chatbot-close" class="text-white hover:text-gray-200"><i class="fa-solid fa-xmark"></i></button>
+                <button id="chatbot-close" class="text-white hover:text-gray-200"><i class="fas fa-times"></i></button>
             </div>
             <div id="chat-messages" class="flex-1 p-4 overflow-y-auto" style="max-height: 300px;">
                 <!-- Chat messages will be injected here -->
             </div>
             <div class="p-4 border-t border-gray-200 flex">
                 <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="flex-1 border rounded-l-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-                <button id="chat-send" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-r-lg"><i class="fa-solid fa-paper-plane"></i></button>
+                <button id="chat-send" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-r-lg"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
 
     <!-- WhatsApp Float Button -->
     <div class="fixed bottom-6 left-6 z-50">
-        <a href="https://wa.me/5511956377650?text=Olá%20Thiago!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços." target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl animate-bounce">
-            <i class="fa-brands fa-whatsapp w-7 h-7"></i>
+        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre seus serviços de criação de sites." target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl animate-bounce">
+            <i class="fab fa-whatsapp w-7 h-7"></i>
         </a>
     </div>
 
     <script src="./script.js"></script>
 </body>
 </html>
+
